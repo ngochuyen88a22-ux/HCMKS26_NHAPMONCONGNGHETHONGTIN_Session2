@@ -8,17 +8,16 @@ Vị trí dữ liệu:
 - Storage: Lưu file cài đặt chrome, dữ liệu bộ nhớ đệm hoặc file bộ nhớ ảo khi RAM bị đầy
 Giải thích:
 - Mở 30 tab Chrome làm RAM bị kín chỗ (98%), không còn không gian để xử lý việc mới nên máy bị giật lag
-- Lúc này, Windows tự động dùng Swap/Page File để chuyển những dữ liệu chưa dùng cất tạm vào ổ cứng Storage
+- Windows tự động dùng Swap/Page File để chuyển những dữ liệu chưa dùng cất tạm vào ổ cứng Storage
 - Nếu dùng ổ cứng HDD cũ, các tab chạy rất chậm và việc chuyển đổi qua lại liên tục làm ổ cứng quá tải (Disk 100%), khiến chuột và máy đơ cứng. Ngược lại, nếu dùng ổ SSD đời mới máy sẽ mượt hơn và hiếm khi giật lag
 2. Đề xuất 3 hành động giải phóng RAM ngay lập tức:
 - Đóng bớt các tab Chrome không dùng
 - Tắt tiến trình ngầm bằng Task Manager: tổ hợp phím Ctrl + Shift + Esc, chọn tab Chrome hoặc phần mềm nặng đang chiếm nhiều RAM rồi bấm End task
-- Bật trình tiết kiệm bộ nhớ trên Chrome: Vào cài đặt Chrome -> Hiệu suất bật trình tiết kiệm bộ nhớ để chrome tự giải phóng 
+- Bật trình tiết kiệm bộ nhớ trên Chrome: Vào cài đặt Chrome -> Hiệu suất -> trình tiết kiệm bộ nhớ 
 PHẦN 2: BÁO CÁO CHẨN ĐOÁN SỨC KHỎE MÁY TÍNH
-BÁO CÁO CHẨN ĐOÁN TÌNH TRẠNG HỆ THỐNG
-Thông số thực tế từ Task Manager:
+Thông số Task Manager:
 - CPU: 15% (an toàn, bình thường)
 - RAM: 98% (báo động đỏ, quá tải nghiêm trọng)
-- Disk: 100% (báo động đỏ, ổ cứng HDD bị nghẽn do phải duy trì bộ nhớ ảo)
-Kết luận sức khỏe máy tính: Máy tính đang rơi vào trạng thái quá tải bộ nhớ tạm thời. Nguyên nhân chính do mở quá nhiều tab Chrome vượt quá dung lượng RAM thực tế, ép hệ thống phải dùng ổ cứng HDD làm bộ nhớ ảo dẫn đến đơ lag.
+- Disk: 100% (báo động đỏ, ổ cứng HDD khó hoạt động do phải duy trì bộ nhớ ảo)
+Kết luận: Máy tính đang rơi vào trạng thái quá tải bộ nhớ tạm thời. Nguyên nhân chính do mở quá nhiều tab Chrome vượt quá dung lượng RAM thực tế, ép hệ thống phải dùng ổ cứng HDD làm bộ nhớ ảo dẫn đến đơ lag.
 Khuyến nghị xử lý: Đóng bớt 15–20 tab Chrome ngay lập tức hoặc nâng cấp thêm thanh RAM (lên 16 GB) và thay thế ổ cứng HDD sang SSD NVMe để tối ưu tốc độ
