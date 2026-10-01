@@ -1,0 +1,16 @@
+PHẦN 1: PHÂN TÍCH VẤN ĐỀ
+1. Chỉ ra điểm sai lệch trong cách phân loại hiện tại
+Báo cáo của đội ngũ Data Analyst đã xáo trộn hoàn toàn các tầng trong tháp DIKW. Cụ thể:
+Tầng Data (Dữ liệu) bị xếp sai: Đã đưa nội dung "Khách hàng A thường xuyên vắng nhà vào buổi sáng" vào đây. Thực chất, đây không phải dữ liệu thô mà là một thông tin đã qua xử lý, rút ra từ việc tổng hợp hành vi
+Tầng Information (Thông tin) bị xếp sai: Đã đưa chuỗi giá trị "1205, 50000, 0912345678" vào tầng này. Đây hoàn toàn là các con số, chuỗi ký tự thô, chưa có bối cảnh hay ý nghĩa rõ ràng
+Tầng Knowledge (Tri thức) bị xếp sai: Đã đưa đề xuất "Đề xuất giao hàng cho khách A vào buổi chiều để tăng tỷ lệ thành công". Đây là một quyết định,hành động chiến lược cụ thể nhằm giải quyết vấn đề, thuộc tầng Wisdom chứ không ở tri thức
+Tầng Wisdom (Sự thông thái) bị xếp sai: Đã đưa "Bảng thống kê số đơn giao trễ trong tháng" vào tầng này. Bảng thống kê là dữ liệu đã được gom nhóm, tổng hợp và gán bối cảnh, thực chất thuộc tầng Information hoặc Knowledge
+2. Định nghĩa chuẩn về các tầng trong tháp DIKW
+Data (Dữ liệu): Là các sự kiện, con số, ký tự, hoặc quan sát thô chưa qua xử lý, chưa được sắp xếp và chưa có bối cảnh hay ý nghĩa cụ thể (Trả lời cho câu hỏi: Cái gì?)
+Information (Thông tin): Là dữ liệu đã được xử lý, cấu trúc, gán bối cảnh hoặc tổng hợp lại để mang một ý nghĩa rõ ràng đối với người đọc (Trả lời cho các câu hỏi: Ai? Ở đâu? Khi nào? Cái gì?)
+Knowledge (Tri thức): Là sự hiểu biết, rút ra quy luật, nguyên nhân hoặc mối quan hệ từ việc phân tích thông tin kết hợp với kinh nghiệm/thực tiễn (Trả lời cho câu hỏi: Tại sao? Như thế nào?)
+Wisdom (Sự thông thái): Là khả năng áp dụng tri thức vào thực tế để đưa ra quyết định, đề xuất, hành động chiến lược đúng đắn nhằm tối ưu hóa hoặc giải quyết vấn đề (Trả lời cho câu hỏi: Nên làm gì?)
+Data (Dữ liệu): 1205, 50000, 0912345678.Đây là các chuỗi con số/ký tự thô hoàn toàn chưa có bối cảnh hay ý nghĩa cụ thể.
+Information (Thông tin): Bảng thống kê số đơn giao trễ trong tháng. Dữ liệu thô đã được thu thập, gom nhóm và tổng hợp theo mốc thời gian để phản ánh bức tranh thực tế về tình hình giao hàng.
+Knowledge (Tri thức): “Khách hàng A thường xuyên vắng nhà vào buổi sáng”. Đã qua quá trình phân tích thông tin từ lịch sử giao hàng để đúc kết ra quy luật/thói quen hành vi của khách hàng.
+Wisdom (Sự thông thái): “Đề xuất giao hàng cho khách A vào buổi chiều để tăng tỷ lệ thành công”. Vận dụng hiểu biết (tri thức) về thói quen của khách hàng để đưa ra hành động/đề xuất giải pháp chiến lược nhằm cải thiện hiệu quả công việc.
