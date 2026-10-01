@@ -1,0 +1,16 @@
+PHẦN 1: PHÂN TÍCH VẤN ĐỀ
+Phép tính sai: Dòng quy đổi dung lượng 1000 ảnh: lấy 4 MB nhân 1000 bằng 4000 MB rồi cho bằng 4 GB (đang lấy hệ số quy đổi 1000)
+Nguyên nhân:
+Sai trong quy đổi: Máy tính dùng hệ số 1024 (1 GB = 1024 MB), nên 4000 MB thực chất chưa đủ 4 GB (thiếu 96 MB mới đủ 4 GB)
+Thực tế hệ điều hành báo dung lượng trống cao hơn: Do sinh viên tính tròn thành 4 GB nên dung lượng đã sử dụng bị đội lên, làm cho dung lượng trống thực tế trên máy nhiều hơn con số 112 GB tính ra
+PHẦN 2: HOÀN THIỆN BÀI GIẢI
+Tính lại dung lượng sử dụng theo hệ số 1024:
+Bộ công cụ lập trình: 40 GB
+1000 ảnh bài giảng: 4000 MB quy đổi ra là 3 GB và còn thừa 928 MB
+50 phim Full HD: 100 GB
+Tổng dung lượng sử dụng: 143 GB và 928 MB
+Tính lại dung lượng còn trống:
+Dung lượng còn trống: 112 GB và 96 MB
+Kiểm tra việc lưu thêm 500 bài hát MP3 (5 MB/bài):
+Dung lượng 500 bài hát: 2500 MB quy đổi ra là 2 GB và còn thừa 452 MB
+Kết luận: Ổ cứng hoàn toàn đủ dung lượng vì dung lượng còn trống (hơn 112 GB) lớn hơn rất nhiều so với dung lượng cần lưu thêm (chỉ hơn 2 GB). Lưu xong máy vẫn còn trống khoảng 109 GB và 668 MB
