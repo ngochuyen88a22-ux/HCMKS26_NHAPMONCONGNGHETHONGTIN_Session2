@@ -1,29 +1,27 @@
 Phần 1: Phân tích lỗi sai
-1.	Nhầm gói mạng 100 Mbps tương đương với 100 MB/s:
--	Nguyên nhân: Nhầm lẫn giữa Mbps (Megabits per second - Megabit trên giây) và MB/s (Megabytes per second - Megabyte trên giây) 
-2.	Nhà mạng chỉ cung cấp 12.5% tốc độ cam kết:
+Lỗi 1.	Nhầm gói mạng 100 Mbps tương đương với 100 MB/s:
+-	Nguyên nhân: Nhầm lẫn giữa Mbps (Megabit trên giây) và MB/s (Megabyte trên giây) 
+Lỗi 2.	Cho rằng nhà mạng chỉ cung cấp 12.5% tốc độ cam kết
 -	Nguyên nhân: Tính toán dựa trên phép chia sai đơn vị 
-3.	Khẳng định nếu mạng giảm xuống 40 Mbps, tải tệp 1 GB mất khoảng 25 giây 
+Lỗi 3.	Khẳng định nếu mạng giảm xuống 40 Mbps, tải tệp 1 GB mất khoảng 25 giây 
 -	Nguyên nhân: Lấy kích thước tệp 1GB chia trực tiếp cho 40 mà không đổi đơn vị 40 Mbps sang MB/s
 Phần 2: Hoàn thiện bài
 Bước 1: Quy đổi tốc độ gói mạng
-Gói mạng có tốc độ:
-100 Mbps
+Gói mạng có tốc độ: 100 Mbps
 Vì 1 Byte = 8 Bits
 Nên 100 Mbps : 8 = 12,5 MB/s
 Vậy tốc độ 100 Mbps tương đương 12,5 MB/s.
 Bước 2: So sánh với tốc độ trình duyệt
 Trình duyệt hiển thị:12,5 MB/s
 Đây chính là tốc độ tương đương với: 12,5 x 8 = 100 Mbps
-Do đó, về mặt quy đổi đơn vị, tốc độ tải của Nam phù hợp với gói mạng 100 Mbps.
+Do đó, về mặt quy đổi đơn vị, tốc độ tải của Nam phù hợp với gói mạng 100 Mbps
 Bước 3: Trường hợp mạng giảm xuống 40 Mbps
 Đổi sang MB/s= 40 : 8 = 5 MB/s
 Với tệp 1 GB = 1000 MB:
-Thời gian = 1000 ÷ 5 = 200 giây -> 200 giây = 3 phút 20 giây.
-Kết luận
-Lời giải ban đầu sai do nhầm lẫn giữa Bit (b) và Byte (B).
+Thời gian = 1000 : 5 = 200 giây -> 200 giây = 3 phút 20 giây
+Kết luận: Lời giải ban đầu sai do nhầm lẫn giữa Bit và Byte
 100 Mbps = 12,5 MB/s, không phải 100 MB/s.
-12,5 MB/s là tốc độ phù hợp với 100 Mbps khi quy đổi đơn vị.
-40 Mbps = 5 MB/s.
-Tải 1 GB ở tốc độ 40 Mbps mất khoảng 200 giây (3 phút 20 giây) theo cách tính của bài.
- Nam không nên khiếu nại nhà mạng chỉ dựa trên số liệu 12,5 MB/s, vì tốc độ này tương đương với 100 Mbps sau khi quy đổi đúng đơn vị
+12,5 MB/s là tốc độ phù hợp với 100 Mbps khi quy đổi đơn vị
+40 Mbps = 5 MB/s
+Tải 1 GB ở tốc độ 40 Mbps mất 3 phút 20 giây 
+Nam không nên khiếu nại nhà mạng chỉ dựa trên số liệu 12,5 MB/s, vì tốc độ này tương đương với 100 Mbps sau khi quy đổi đúng đơn vị
