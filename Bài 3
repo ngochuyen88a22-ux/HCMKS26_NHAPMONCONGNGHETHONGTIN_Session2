@@ -1,0 +1,26 @@
+PHẦN 1: PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP
+1. Phác thảo sơ đồ luồng IPO của 1 tab Chrome đang chạy
+- Input (Đầu vào): Người dùng gõ địa chỉ web, click chuột hoặc nhập dữ liệu trên tab Chrome
+- Process (Xử lý): CPU tiếp nhận lệnh và xử lý các phép toán, mã javascript của trang web
+- Output (Đầu ra): Trang web hiển thị giao diện hình ảnh, chữ, video lên màn hình
+Vị trí dữ liệu:
+- RAM: Lưu toàn bộ dữ liệu tab Chrome đang hoạt động để CPU truy xuất cực nhanh
+- Storage (Ổ cứng HDD/SSD): Lưu file cài đặt Chrome, dữ liệu bộ nhớ đệm (cache) hoặc file bộ nhớ ảo (Page File) khi RAM bị đầy
+Giải thích tình trạng máy & Swap/Page File:
+- Nếu như tưởng tượng RAM như chiếc bàn học, còn các tab Chrome là đống sách vở. Mở 30 tab Chrome làm bàn bị kín chỗ (RAM 98%), không còn không gian để xử lý việc mới nên máy bị giật lag
+- Lúc này, Windows tự động dùng kỹ thuật Swap/Page File để bê bớt những cuốn sách chưa dùng cất tạm vào ngăn kéo (ổ cứng Storage)
+- Nếu dùng ổ cứng HDD cũ, ngăn kéo này mở rất chậm và rít, việc cất/lấy sách qua lại liên tục làm ổ cứng quá tải (Disk 100%), khiến chuột và máy đơ cứng. Ngược lại, nếu dùng ổ SSD NVMe đời mới, ngăn kéo này trượt siêu tốc nên việc cất, lấy dữ liệu diễn ra trong chớp mắtmà  máy vẫn chạy mượt mà và hầu như không bị giật lag
+2. Đề xuất 3 hành động giải phóng RAM ngay lập tức:
+- Đóng bớt các tab Chrome không dùng: Bấm dấu x để tắt bớt các tab xem phim, nghe nhạc, mạng xã hội chưa cần thiết
+- Tắt tiến trình ngầm bằng Task Manager: Bấm tổ hợp phím Ctrl + Shift + Esc, chọn tab Chrome hoặc phần mềm nặng đang chiếm nhiều RAM rồi bấm End task
+- Bật trình tiết kiệm bộ nhớ trên Chrome: Vào cài đặt Chrome -> Hiệu suất bật "Trình tiết kiệm bộ nhớ" để Chrome tự giải phóng RAM của các tab đang treo ngầm
+PHẦN 2: BÁO CÁO CHẨN ĐOÁN SỨC KHỎE MÁY TÍNH
+BÁO CÁO CHẨN ĐOÁN TÌNH TRẠNG HỆ THỐNG
+Thông số thực tế từ Task Manager:
+- CPU: 15% (Mức an toàn, xử lý bình thường)
+- RAM: 98% (Mức báo động đỏ, quá tải nghiêm trọng)
+- Disk: 100% (Mức báo động đỏ, ổ cứng HDD đang bị nghẽn do phải gánh bộ nhớ ảo)
+Kết luận sức khỏe máy tính: Máy tính đang rơi vào trạng thái "quá tải bộ nhớ tạm thời". Nguyên nhân chính do mở quá nhiều tab Chrome vượt quá dung lượng RAM thực tế, ép hệ thống phải dùng ổ cứng HDD làm bộ nhớ ảo dẫn đến đơ lag.
+Khuyến nghị xử lý:
+- Ngắn hạn: Đóng bớt 15–20 tab Chrome ngay lập tức
+- Dài hạn: Nâng cấp thêm thanh RAM (lên 16 GB) và thay thế ổ cứng HDD sang SSD NVMe để tối ưu tốc độ
