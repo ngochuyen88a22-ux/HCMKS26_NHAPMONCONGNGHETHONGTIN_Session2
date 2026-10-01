@@ -1,0 +1,11 @@
+1. PHÂN TÍCH IPO ( LUỒNG XỬ LÝ)
+- Input: 2 bức ảnh chụp bằng chứng giao hàng, mã đơn hàng, mã tài xế, tọa độ GPS, thời gian
+- Process:App tự động nén, kiểm tra kích thước ảnh rồi server tiếp nhận, lưu ảnh vào Cloud Storage và ghi địa chỉ web vào Database.
+- Output: Thông báo giao hàng thành công trên app tài xế và cập nhật trạng thái đơn hàng và hiển thị ảnh bằng chứng lên hệ thống.
+2. GIẢI PHÁP XỬ LÝ BẪY DỮ LIỆU ẢNH LỚN HƠN 5 MB
+Tự động làm nhẹ ảnh ngay trên điện thoại tài xế: Khi tài xế bấm chụp, ứng dụng sẽ tự động thu nhỏ độ phân giải và nén ảnh xuống khoảng 2–3 MB trước khi gửi đi, giúp ảnh vừa đủ nét để nhìn rõ mà không làm nghẽn hay đầy máy chủ.
+3. TÍNH TOÁN DUNG LƯỢNG LƯU TRỮ (30 NGÀY)
+Tổng số ảnh/tháng: 50,000 đơn/ngày ×2 ảnh ×30 ngày =3,000,000 ảnh 
+Dung lượng theo MB: 3,000,000 ảnh ×3 MB =9,000,000 MB
+Quy đổi sang TB (Hệ 10 - Chuẩn lưu trữ): 9,000,000 MB = 9,000 GB = 9 TB .
+Quy đổi sang TB (Hệ 2 - Chuẩn hệ điều hành): 9,000,000/(1024×1024) gần bằng 8.58 TB 
